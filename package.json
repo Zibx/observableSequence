@@ -1,0 +1,26 @@
+{
+  "name": "observable-sequence",
+  "version": "0.0.1",
+  "description": "observable sequence",
+  "main": "index.js",
+  "scripts": {
+    "test": "_mocha",
+    "coverage": "istanbul cover _mocha -- -R spec"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "nvm": "*"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*",
+    "istanbul": "*"
+  },
+  "keywords": [
+    "dequeue"
+  ],
+  "author": "Zibx",
+  "license": "MIT"
+}

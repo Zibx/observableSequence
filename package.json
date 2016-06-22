@@ -1,8 +1,8 @@
 {
   "name": "observable-sequence",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "observable sequence",
-  "main": "index.js",
+  "main": "observableSequence.js",
   "scripts": {
     "test": "_mocha",
     "coverage": "istanbul cover _mocha -- -R spec"

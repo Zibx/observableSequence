@@ -5,6 +5,35 @@
  */;// Copyright by Ivan Kubota. 2015
 module.exports = (function () {
     'use strict';
+    var Iterator = function( obj, start ){
+        this.obj = obj;
+        this.pointer = start === void 0 ? -1 : start;
+    };
+    Iterator.prototype = {
+        get: function(){
+            return this.obj.get(this.pointer);
+        },
+        home: function(){
+            this.pointer = -1;
+        },
+        end: function(){
+            this.pointer = this.obj.length;
+        },
+        next: function(){
+            this.pointer++;
+            return this.get();
+        },
+        prev: function(){
+            this.pointer--;
+            return this.get();
+        },
+        last: function(){
+            return this.pointer === this.obj.length - 1;
+        },
+        remove: function(){
+            this.obj.splice(this.pointer, 1);
+        }
+    };
     var getter = function( i ){
         return this[i];
     };
@@ -103,6 +132,9 @@ module.exports = (function () {
                 return void 0; // for same behavior we return empty array
             }
             return this.splice(pos, 1, item)[0];
+        },
+        iterator: function(start){
+            return new Iterator(this, start);
         },
         get: function (pos) {
             return this._arr[pos];

@@ -137,7 +137,7 @@ module.exports = (function () {
             return new Iterator(this, start);
         },
         get: function (pos) {
-            return this._arr[pos];
+            return this._arr.get(pos);
         },
         remove: function(pos){
             var item = this._arr.splice(pos,1)[0];

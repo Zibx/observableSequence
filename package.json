@@ -1,6 +1,6 @@
 {
   "name": "observable-sequence",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "observable sequence",
   "main": "observableSequence.js",
   "scripts": {
